@@ -28,8 +28,8 @@ export async function registerUser(req,res){
 
  res.cookie("token", token, {
   httpOnly: true,
-  secure: false,     // true only in production
-  sameSite: "lax"
+  secure: true,     // true only in production
+  sameSite: "none"
 });
 
   return res.status(201).json({
@@ -66,8 +66,8 @@ export async function loginUser(req,res){
 
   res.cookie("token", token, {
   httpOnly: true,
-  secure: false,     // true only in production
-  sameSite: "lax"
+  secure: true,     // true only in production
+  sameSite: "none"
 });
 
   res.status(200).json({
@@ -123,8 +123,8 @@ export async function registerFoodPartner(req,res){
 
 res.cookie("token", token, {
   httpOnly: true,
-  secure: false,     // true only in production
-  sameSite: "lax"
+  secure: true,     // true only in production
+  sameSite: "none"
 });
 
   return res.status(201).json({
@@ -164,8 +164,8 @@ export async function loginFoodPartner(req,res){
   
 res.cookie("token", token, {
   httpOnly: true,
-  secure: false,     // true only in production
-  sameSite: "lax"
+  secure: true,     // true only in production
+  sameSite: "none"
 });
 
   return res.status(200).json({
