@@ -6,9 +6,13 @@ import cors from 'cors'
 const app = express();
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL_ORIGIN,
-  credentials: true
-}))
+  origin: [
+    "http://localhost:5173",
+    "https://reelmate.vercel.app",        
+    "https://reelmate-eimk0gx3s-aysuh-singhs-projects.vercel.app" 
+  ],
+  credentials: true   
+}));
 app.use(express.json())   //read req.body
 app.use(cookieParser())
 
