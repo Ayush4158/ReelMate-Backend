@@ -102,7 +102,7 @@ export async function saveFood(req, res) {
     );
 
     return res.status(200).json({
-      message: "Food unsaved successfully",
+      message: "Video unsaved successfully",
       saveCount: updatedFood.saveCount, 
     });
   }
@@ -115,7 +115,7 @@ export async function saveFood(req, res) {
   );
 
   return res.status(200).json({
-    message: "Food saved successfully",
+    message: "Video saved successfully",
     saveCount: updatedFood.saveCount, 
   });
 }
