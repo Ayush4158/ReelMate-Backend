@@ -66,6 +66,7 @@ export async function likeFood(req, res) {
       return res.status(200).json({
         message: "Food disliked successfully",
         likeCount: updatedFood.likeCount,
+        isLiked: false
       });
     }
 
@@ -80,6 +81,7 @@ export async function likeFood(req, res) {
     return res.status(200).json({
       message: "Food liked successfully",
       likeCount: updatedFood.likeCount,
+      isLiked: true
     });
   } catch (error) {
     console.error("Error in likeFood:", error);
@@ -104,6 +106,7 @@ export async function saveFood(req, res) {
     return res.status(200).json({
       message: "Video unsaved successfully",
       saveCount: updatedFood.saveCount, 
+      isSaved: false
     });
   }
 
@@ -117,5 +120,6 @@ export async function saveFood(req, res) {
   return res.status(200).json({
     message: "Video saved successfully",
     saveCount: updatedFood.saveCount, 
+    isSaved: true
   });
 }
