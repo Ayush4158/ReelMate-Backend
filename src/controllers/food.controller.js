@@ -60,7 +60,7 @@ export async function likeFood(req, res) {
       const updatedFood = await Food.findByIdAndUpdate(
         foodId,
         { $inc: { likeCount: -1 } },
-        { new: true } // ✅ return updated document
+        { new: true } 
       );
 
       return res.status(200).json({
@@ -75,7 +75,7 @@ export async function likeFood(req, res) {
     const updatedFood = await Food.findByIdAndUpdate(
       foodId,
       { $inc: { likeCount: 1 } },
-      { new: true } // ✅ return updated document
+      { new: true }
     );
 
     return res.status(200).json({
